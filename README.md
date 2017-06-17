@@ -9,4 +9,5 @@ Install instructions:
 1) git clone https://github.com/danpassmore/buybot.git
 2) npm install gdax
 
-
+Running Instructions:
+1) node <filenamename.js>
