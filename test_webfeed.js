@@ -1,7 +1,10 @@
+/* jshint node: true */
+"use strict";
+
 var gdax = require('gdax');
 var util = require('util');
 
-var onderbookSync;
+var orderbookSync;
 
 var updateStatus = function(data) {
   var state = orderbookSync.book.state();
@@ -15,12 +18,12 @@ var updateStatus = function(data) {
   }
   var str = util.format("[%d]\t%d\t%d\t%s", data.sequence, highestBid, lowestAsk, data.type);
   console.log(str);
-}
+};
 
 var messageReceived = function(data)
 {
   updateStatus(data);
-}
+};
 
 orderbookSync = new gdax.OrderbookSync('ETH-USD', 'https://api.gdax.com', 'wss://ws-feed.gdax.com', messageReceived);
 //var orderbookSync = new gdax.OrderbookSync(productID='ETH-USD', 'https://api-public.sandbox.gdax.com', 'wss://ws-feed.gdax.com');
