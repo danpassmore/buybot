@@ -7,5 +7,6 @@ Pre-Install Steps:
 Install instructions:
 
 1) git clone https://github.com/danpassmore/buybot.git
-2) npm run start
-3) app will auto load at localhost:3000
+2) npm install
+3) npm run start
+4) app will auto load at localhost:3000
