@@ -8,21 +8,26 @@
     "express": "^4.15.3",
     "foreman": "^2.0.0",
     "gdax": "^0.4.2",
+    "marked": "^0.3.6",
     "mongoose": "^4.10.7",
     "nodemon": "^1.11.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
+    "bufferutil": "^3.0.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-plugin-import": "^2.6.0",
     "eslint-plugin-jsx-a11y": "^5.1.0",
     "eslint-plugin-react": "^7.1.0",
-    "react-scripts": "1.0.7"
+    "react-scripts": "1.0.7",
+    "utf-8-validate": "^3.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
+    "server": "nodemon server.js",
+    "start-dev": "nf start -p 3000",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

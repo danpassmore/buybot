@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import gdax from 'gdax';
+import axios from 'axios';
 
 class App extends Component {
   constructor(props) {
@@ -21,6 +22,8 @@ class App extends Component {
     this.start_date = undefined;
     /* dynamic date cursor used to mark the end time for each query */
     this.date_cursor = undefined;
+
+    this.handleCandleSubmit = this.handleCandleSubmit.bind(this);
   }
 
   componentDidMount() {
